@@ -1,0 +1,251 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>com.sf.ssh</groupId>
+	<artifactId>test-ssh</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+ 	<packaging>war</packaging>
+ 	
+    <properties>
+        <!-- 统一源码的编码方式 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- 统一各个框架版本 -->
+        <struts.version>2.3.32</struts.version>
+        <spring.version>4.3.8.RELEASE</spring.version>
+    </properties>
+	
+	<dependencies>
+	
+		<!-- Spring 核心依赖 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- Spring Web -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- Spring 事务 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- Struts2 核心依赖 -->
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-core</artifactId>
+            <version>${struts.version}</version>
+        </dependency>
+        <!-- Struts2 注解依赖 -->
+        <dependency>
+        	<groupId>org.apache.struts</groupId>
+        	<artifactId>struts2-convention-plugin</artifactId>
+        	<version>${struts.version}</version>
+        </dependency>
+        <!-- Struts2 json依赖 -->
+        <dependency>  
+        	<groupId>org.apache.struts</groupId>  
+        	<artifactId>struts2-json-plugin</artifactId>  
+        	<version>${struts.version}</version>  
+		</dependency> 
+        <!-- Struts2和Spring整合依赖 -->
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-spring-plugin</artifactId>
+            <version>${struts.version}</version>
+        </dependency>
+
+		<!-- Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>4.3.7.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>5.3.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.common</groupId>
+			<artifactId>hibernate-commons-annotations</artifactId>
+			<version>4.0.5.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache-core</artifactId>
+			<version>2.6.11</version>
+		</dependency>
+
+		<!-- MySQL驱动 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.42</version>
+		</dependency>
+		
+		<!-- 数据源 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.0.26</version>
+		</dependency>
+
+        <!-- 工具类 -->
+        <dependency>
+        	<groupId>org.apache.commons</groupId>
+        	<artifactId>commons-lang3</artifactId>
+        	<version>3.6</version>
+        </dependency>
+        <dependency>
+        	<groupId>commons-beanutils</groupId>
+        	<artifactId>commons-beanutils</artifactId>
+        	<version>1.9.2</version>
+        </dependency>
+        <dependency>
+        	<groupId>commons-io</groupId>
+        	<artifactId>commons-io</artifactId>
+        	<version>2.5</version>
+        </dependency>
+        <dependency>
+        	<groupId>commons-collections</groupId>
+        	<artifactId>commons-collections</artifactId>
+        	<version>3.2.2</version>
+        </dependency>
+
+        <!-- Junit依赖 -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- 日志类 -->
+        <dependency>
+        	<groupId>org.slf4j</groupId>
+        	<artifactId>slf4j-log4j12</artifactId>
+        	<version>1.7.7</version>
+        </dependency>
+        <dependency>
+        	<groupId>log4j</groupId>
+        	<artifactId>log4j</artifactId>
+        	<version>1.2.17</version>
+        </dependency>
+        
+        <!-- jsp、servlet -->
+        <dependency>
+        	<groupId>javax.servlet.jsp</groupId>
+        	<artifactId>jsp-api</artifactId>
+        	<version>2.2.1-b03</version>
+        	<scope>provided</scope>
+        </dependency>
+        <dependency>
+        	<groupId>javax.servlet</groupId>
+        	<artifactId>servlet-api</artifactId>
+        	<version>2.5</version>
+        	<scope>provided</scope>
+        </dependency>
+        
+        <!-- jstl -->
+        <dependency>
+        	<groupId>javax.servlet</groupId>
+        	<artifactId>jstl</artifactId>
+        	<version>1.2</version>
+        </dependency>
+		
+		<!-- fastjson -->
+        <dependency>
+        	<groupId>com.alibaba</groupId>
+        	<artifactId>fastjson</artifactId>
+        	<version>1.2.31</version>
+        </dependency>
+        
+        <!-- mybatis-generator -->
+		<dependency>
+		    <groupId>org.mybatis.generator</groupId>
+		    <artifactId>mybatis-generator-core</artifactId>
+		    <version>1.3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.3.1</version>
+		</dependency>
+
+	</dependencies>
+	
+ 	<build>
+        <plugins>
+        
+            <!-- 统一源代码编译输出的JDK版本 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            
+            <!-- 打包时跳过单元测试 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19.1</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+            
+            <!-- 集成Tomcat插件 -->
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <path>/${project.artifactId}</path>
+                    <port>8080</port>
+	                 <server>tomcat7</server>
+                </configuration>
+            	<executions>
+                	<execution>
+                    	<phase>package</phase>
+                    	<goals>
+                    		<goal>run</goal>
+                   		</goals>
+                	</execution>
+             	</executions>
+            </plugin>
+            
+        </plugins>
+    </build>
+
+</project>

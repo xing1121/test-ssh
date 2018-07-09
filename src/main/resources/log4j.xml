@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+
+	<!-- 控制台输出追加器 -->
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %5p %class.%method\\(%F:%L\\) - %msg%n" />
+        </layout>
+    </appender>
+
+	<!-- 日志文件追加器 -->
+    <appender name="FILE" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="/app/ssh-demo.log" />
+        <param name="MaxBackupIndex" value="100" />
+        <param name="MaxFileSize" value="100MB" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %5p %class.%method\\(%F:%L\\) - %msg%n" />
+        </layout>
+    </appender>
+    
+	<!-- 异步执行追加器 -->
+    <appender name="ASYNC" class="org.apache.log4j.AsyncAppender">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </appender>
+
+	<!-- 日志策略 -->
+    <category name="org.hibernate">
+        <priority value="info" />
+    </category>
+    <category name="java.sql">
+        <priority value="info" />
+    </category>
+	
+	<!-- 默认配置 -->
+    <root>
+        <priority value="info" />
+        <appender-ref ref="ASYNC" />
+    </root>
+
+</log4j:configuration>
