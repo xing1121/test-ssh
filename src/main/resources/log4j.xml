@@ -11,7 +11,7 @@
 
 	<!-- 日志文件追加器 -->
     <appender name="FILE" class="org.apache.log4j.RollingFileAppender">
-        <param name="File" value="/app/ssh-demo.log" />
+        <param name="File" value="/app/test-ssh.log" />
         <param name="MaxBackupIndex" value="100" />
         <param name="MaxFileSize" value="100MB" />
         <layout class="org.apache.log4j.PatternLayout">
